@@ -1,6 +1,9 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  buildModules:['@nuxtjs/tailwindcss'],
+  buildModules:[
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/pwa',
+  ],
   runtimeConfig: {
     apiSecret: '', // can be overridden by NUXT_API_SECRET environment variable
     public: {

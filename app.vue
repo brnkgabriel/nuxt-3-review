@@ -7,8 +7,6 @@
     <!-- <PageHeadings /> -->
     <!-- <InputGroups /> -->
     <!-- <Login /> -->
-    <button @click="signIn">Sign in</button>
-    <button @click="signOut">Sign out</button>
     <!-- <HeroSection /> -->
     <!-- <FeatureSection /> -->
     <!-- <CTASection /> -->
@@ -30,25 +28,10 @@
     <!-- <ProductFeatures /> -->
     <!-- <StoreNavigation /> -->
     <!-- <PromoSections /> -->
-    <pre>
-      {{credentials}}
-    </pre>
+    first
   </div>
 </template>
 <script setup>
-
-const credentials = ref()
-
-const signIn = async () => {
-
-  const email = "brnkgabriel@gmail.com";
-  const password = "1234567";
-  credentials.value = await signInUser(email, password)
-};
-
-const signOut = async () => {
-  credentials.value = await signOutUser();
-};
 
 </script>
 <style>
