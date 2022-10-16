@@ -3,7 +3,18 @@ export default defineNuxtConfig({
   buildModules:[
     '@nuxtjs/tailwindcss',
     '@nuxtjs/pwa',
+    '@nuxtjs/color-mode'
   ],
+  colorMode: {
+    classSuffix: ''
+  },
+  tailwindcss: {
+    cssPath: "~/assets/css/tailwind.css",
+    configPath: "tailwind.config.js",
+    exposeConfig: false,
+    injectPosition: 0,
+    viewer: true
+  },
   runtimeConfig: {
     apiSecret: '', // can be overridden by NUXT_API_SECRET environment variable
     public: {
@@ -16,5 +27,5 @@ export default defineNuxtConfig({
       FB_APP_ID: process.env.FB_APP_ID,
       FB_MEASUREMENT_ID: process.env.FB_MEASUREMENT_ID
     }
-  },
+  }
 })
